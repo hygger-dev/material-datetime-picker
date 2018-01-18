@@ -159,14 +159,18 @@ $primary: #00bcd4 !default;
   }
 }
 
-.c-datepicker__header-date__hours, .c-datepicker__header-date__minutes {
+.c-datepicker__header-date__hours, .c-datepicker__header-date__minutes, .c-datepicker__header-date__am__pm {
   cursor: pointer;
 }
 
-.c-datepicker--show-time.is-selected ~ .c-datepicker__header .c-datepicker__header-date__time {
+.c-datepicker__header-date__am__pm {
+  padding-left: 5px;
+}
+
+.c-datepicker--show-time.is-selected ~ .c-datepicker__header .c-datepicker__header-date__time, .c-datepicker__header-date__am__pm {
   opacity: 1;
 
-  .c-datepicker__header-date__hours, .c-datepicker__header-date__minutes {
+  .c-datepicker__header-date__hours, .c-datepicker__header-date__minutes, .c-datepicker__header-date__am__pm {
     opacity: .6;
     &.active {
       opacity: 1;

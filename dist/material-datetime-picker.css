@@ -123,14 +123,17 @@
   .c-datepicker__header-date__time > span {
     display: inline-block; }
 
-.c-datepicker__header-date__hours, .c-datepicker__header-date__minutes {
+.c-datepicker__header-date__hours, .c-datepicker__header-date__minutes, .c-datepicker__header-date__am__pm {
   cursor: pointer; }
 
-.c-datepicker--show-time.is-selected ~ .c-datepicker__header .c-datepicker__header-date__time {
+.c-datepicker__header-date__am__pm {
+  padding-left: 5px; }
+
+.c-datepicker--show-time.is-selected ~ .c-datepicker__header .c-datepicker__header-date__time, .c-datepicker__header-date__am__pm {
   opacity: 1; }
-  .c-datepicker--show-time.is-selected ~ .c-datepicker__header .c-datepicker__header-date__time .c-datepicker__header-date__hours, .c-datepicker--show-time.is-selected ~ .c-datepicker__header .c-datepicker__header-date__time .c-datepicker__header-date__minutes {
+  .c-datepicker--show-time.is-selected ~ .c-datepicker__header .c-datepicker__header-date__time .c-datepicker__header-date__hours, .c-datepicker--show-time.is-selected ~ .c-datepicker__header .c-datepicker__header-date__time .c-datepicker__header-date__minutes, .c-datepicker--show-time.is-selected ~ .c-datepicker__header .c-datepicker__header-date__time .c-datepicker__header-date__am__pm, .c-datepicker__header-date__am__pm .c-datepicker__header-date__hours, .c-datepicker__header-date__am__pm .c-datepicker__header-date__minutes, .c-datepicker__header-date__am__pm .c-datepicker__header-date__am__pm {
     opacity: .6; }
-    .c-datepicker--show-time.is-selected ~ .c-datepicker__header .c-datepicker__header-date__time .c-datepicker__header-date__hours.active, .c-datepicker--show-time.is-selected ~ .c-datepicker__header .c-datepicker__header-date__time .c-datepicker__header-date__minutes.active {
+    .c-datepicker--show-time.is-selected ~ .c-datepicker__header .c-datepicker__header-date__time .c-datepicker__header-date__hours.active, .c-datepicker--show-time.is-selected ~ .c-datepicker__header .c-datepicker__header-date__time .c-datepicker__header-date__minutes.active, .c-datepicker--show-time.is-selected ~ .c-datepicker__header .c-datepicker__header-date__time .c-datepicker__header-date__am__pm.active, .c-datepicker__header-date__am__pm .c-datepicker__header-date__hours.active, .c-datepicker__header-date__am__pm .c-datepicker__header-date__minutes.active, .c-datepicker__header-date__am__pm .c-datepicker__header-date__am__pm.active {
       opacity: 1; }
 
 .c-datepicker--show-calendar.is-selected ~ .c-datepicker__header .c-datepicker__header-date__month, .c-datepicker--show-calendar.is-selected ~ .c-datepicker__header .c-datepicker__header-date__day {
