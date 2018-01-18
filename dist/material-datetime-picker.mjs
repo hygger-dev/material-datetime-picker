@@ -682,7 +682,7 @@ var DateTimePicker = function (_Events) {
     key: 'setTime',
     value: function setTime(time) {
       var m = moment(time);
-      var minuteAsInt = Math.round(parseInt(m.format('mm'), 10) / 5) * 5;
+      var minuteAsInt = Math.round(parseInt(m.format('mm'), 10) / 5) * 5 % 60;
       m.minutes(minuteAsInt);
 
       var hour = m.format('HH');
