@@ -692,16 +692,16 @@ var DateTimePicker = function (_Events) {
       var minuteAsInt = m.minutes();
       m.minutes(minuteAsInt);
 
-      var hour = m.format('HH');
+      var hour = m.format(this.options.twentyFourHours ? 'HH' : 'hh');
       var minutes = m.format('mm');
       var hourAsInt = this.options.twentyFourHours ? parseInt(hour, 10) % 24 : parseInt(hour, 10) % 12;
 
       var oldActiveHours = this.$('.js-clock-hours .' + this.options.styles.clockNum + '--active');
       var oldActiveMinutes = this.$('.js-clock-minutes .' + this.options.styles.clockNum + '--active');
 
-      this.$('.js-date-hours').innerText = this.options.twentyFourHours ? hour : hour % 12;
+      this.$('.js-date-hours').innerText = hour;
       this.$('.js-date-minutes').innerText = minutes;
-      this.$('.js-date-am-pm-mode').innerText = this.options.twentyFourHours ? '' : hour < 12 ? 'AM' : 'PM';
+      this.$('.js-date-am-pm-mode').innerText = this.options.twentyFourHours ? '' : m.format('A');
 
       if (oldActiveHours) {
         oldActiveHours.classList.remove(this.options.styles.clockNum + '--active');
