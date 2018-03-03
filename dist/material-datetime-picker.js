@@ -1,6 +1,6 @@
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('rome'), require('moment')) :
-	typeof define === 'function' && define.amd ? define(['rome', 'moment'], factory) :
+	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('rome'), require('moment-mini-ts')) :
+	typeof define === 'function' && define.amd ? define(['rome', 'moment-mini-ts'], factory) :
 	(global.MaterialDatetimePicker = factory(global.rome,global.moment));
 }(this, (function (rome,moment) { 'use strict';
 

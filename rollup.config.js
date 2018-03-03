@@ -17,7 +17,8 @@ export default {
   external,
   globals: {
     rome: 'rome',
-    moment: 'moment'
+    'moment-mini-ts': 'moment',
+    moment: 'moment-mini-ts'
   },
   targets: [
     {
